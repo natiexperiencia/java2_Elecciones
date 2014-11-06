@@ -1,9 +1,9 @@
 
 public class Inmueble{
 
-	double largo, ancho;
-	String nombre, calleDireccion;
-	int numeroDireccion;
+	private double largo, ancho;
+	private String nombre, calleDireccion;
+	private int numeroDireccion;
 
 	public Inmueble(String nombre, String calleDireccion, int numeroDireccion, double largo, double ancho){
 		nombre = nombre;
@@ -28,31 +28,31 @@ public class Inmueble{
 		return nombre;
 	}
 	public void setNombre(String nombre){
-		nombre = nombre;
+		this.nombre = nombre;
 	}
 	public String getCalleDireccion(){
 		return calleDireccion;
 	}
 	public void setCalleDireccion(String calleDireccion){
-		calleDireccion = calleDireccion;
+		this.calleDireccion = calleDireccion;
 	}
 	public int getNumeroDireccion(){
 		return numeroDireccion;
 	}
 	public void setNumeroDireccion(int numeroDireccion){
-		numeroDireccion = numeroDireccion;
+		this.numeroDireccion = numeroDireccion;
 	}
 	public double getLargo(){
 		return largo;
 	}
 	public void setLargo(double largo){
-		largo = largo;
+		this.largo = largo;
 	}
 	public double getAncho(){
 		return ancho;
 	}
 	public void setLargo(int largo){
-		largo = largo;
+		this.largo = largo;
 	}
 
 }

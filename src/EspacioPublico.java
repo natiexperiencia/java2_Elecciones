@@ -1,10 +1,10 @@
 
 public class EspacioPublico{
 
-	String tipo, nombre, calleDireccion;
-	int numeroDireccion;
-	double ancho, largo;
-	boolean intemperie;
+	private String tipo, nombre, calleDireccion;
+	private int numeroDireccion;
+	private double ancho, largo;
+	private boolean intemperie;
 
 	public EspacioPublico(String nombre, String tipo, String calleDireccion, int numeroDireccion, double ancho, double largo, boolean intemperie){
 		nombre = nombre;
@@ -30,42 +30,42 @@ public class EspacioPublico{
 		return nombre;
 	}
 	public void setNombre(String nombre){
-		nombre = nombre;
+		this.nombre = nombre;
 	}
 	public String getCalleDireccion(){
 		return calleDireccion;
 	}
 	public void setCalleDireccion(String calleDireccion){
-		calleDireccion = calleDireccion;
+		this.calleDireccion = calleDireccion;
 	}
 	public int getNumeroDireccion(){
 		return numeroDireccion;
 	}
 	public void setNumeroDireccion(int numeroDireccion){
-		numeroDireccion = numeroDireccion;
+		this.numeroDireccion = numeroDireccion;
 	}
 	public double getLargo(){
 		return largo;
 	}
 	public void setLargo(double largo){
-		largo = largo;
+		this.largo = largo;
 	}
 	public double getAncho(){
 		return ancho;
 	}
 	public void setLargo(int largo){
-		largo = largo;
+		this.largo = largo;
 	}
 	public String getTipo(){
 		return tipo;
 	}
 	public void setTipo(String tipo){
-		tipo = tipo;
+		this.tipo = tipo;
 	}
 	public boolean getIntemperie(){
 		return intemperie;
 	}
 	public void setIntemperie(boolean intemperie){
-		intemperie = intemperie;
+		this.intemperie = intemperie;
 	}
 }

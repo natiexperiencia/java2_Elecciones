@@ -1,8 +1,8 @@
 
 public class Ayuntamiento{
 
-	String nombre, alcalde, calleDireccion;
-	int numeroDireccion, poblacion, censo;
+	private String nombre, alcalde, calleDireccion;
+	private int numeroDireccion, poblacion, censo;
 
 	public Ayuntamiento(String nombre, String alcalde, String calleDireccion, int numeroDireccion, int poblacion, int censo){
 		nombre = nombre;
@@ -21,37 +21,37 @@ public class Ayuntamiento{
 		return nombre;
 	}
 	public void setNombre(String nombre){
-		nombre = nombre;
+		this.nombre = nombre;
 	}
 	public String getCalleDireccion(){
 		return calleDireccion;
 	}
 	public void setCalleDireccion(String calleDireccion){
-		calleDireccion = calleDireccion;
+		this.calleDireccion = calleDireccion;
 	}
 	public int getNumeroDireccion(){
 		return numeroDireccion;
 	}
 	public void setNumeroDireccion(int numeroDireccion){
-		numeroDireccion = numeroDireccion;
+		this.numeroDireccion = numeroDireccion;
 	}
 	public String getAlcalde(){
 		return alcalde;
 	}
 	public void setAlcalde(String alcalde){
-		alcalde = alcalde;
+		this.alcalde = alcalde;
 	}
 	public int getPoblacion() {
 		return poblacion;
 	}
 	public void setPoblacion(int poblacion){
-		poblacion = poblacion;
+		this.poblacion = poblacion;
 	}
 	public int getCenso(){
 		return censo;
 	}
 	public void setCenso(int censo){
-		censo = censo;
+		this.censo = censo;
 	}
 
 }

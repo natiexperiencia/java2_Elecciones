@@ -1,8 +1,8 @@
 
 public class Habitante {
 
-	private String nombre, apellido, calleDireccion, voto;
-	private int edad, numeroDireccion;
+	String nombre, apellido, calleDireccion, voto;
+	int edad, numeroDireccion;
 
 	public Habitante (String nombre, String apellido, int edad, String calleDireccion, int numeroDireccion ){
 		nombre = nombre;
@@ -14,12 +14,12 @@ public class Habitante {
 
 	public String direccion(){
 		String stringNumeroDireccion = Integer.toString(this.getNumeroDireccion());
-		String direccion = this.getCalleDireccion()+ " " + stringNumeroDireccion;
+		String direccion = this.getCalleDireccion() + stringNumeroDireccion;
 		return direccion;
 	}
 
 	public String getNombre(){
-		return nombre;
+		return this.nombre;
 	}
 	public void setNombre(String nombre){
 		this.nombre = nombre;
@@ -28,30 +28,30 @@ public class Habitante {
 		return apellido;
 	}
 	public void setApellido(String apellido){
-		this.apellido = apellido;
+		apellido = apellido;
 	}
 	public int getEdad(){
 		return edad;
 	}
 	public void setEdad(int edad){
-		this.edad = edad;
+		edad = edad;
 	}
 	public String getCalleDireccion(){
 		return calleDireccion;
 	}
 	public void setCalleDireccion(String calleDireccion){
-		this.calleDireccion = calleDireccion;
+		calleDireccion = calleDireccion;
 	}
 	public int getNumeroDireccion(){
 		return numeroDireccion;
 	}
 	public void setNumeroDireccion(int numeroDireccion){
-		this.numeroDireccion = numeroDireccion;
+		numeroDireccion = numeroDireccion;
 	}
 	public String getVoto(){
 		return voto;
 	}
 	public void setVoto(String voto){
-		this.voto = voto;
+		voto = voto;
 	}
 }

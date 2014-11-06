@@ -1,9 +1,9 @@
 
 public class Partido{
 
-	String nombre, presidente, lema;
-	int componentes, ano;
-	boolean ganador;
+	private String nombre, presidente, lema;
+	private int componentes, ano;
+	private boolean ganador;
 
 	public Partido(String nombre, String presidente, String lema, int componentes, int ano, boolean ganador){
 		nombre = nombre;
@@ -17,36 +17,36 @@ public class Partido{
 		return nombre;
 	}
 	public void setNombre(String nombre){
-		nombre = nombre;
+		this.nombre = nombre;
 	}
 	public String getPresidente(){
 		return presidente;
 	}
 	public void setPresidente(String presidente){
-		presidente = presidente;
+		this.presidente = presidente;
 	}
 	public String getLema(){
 		return lema;
 	}
 	public void setLema(String lema){
-		lema = lema;
+		this.lema = lema;
 	}
 	public int getComponentes(){
 		return componentes;
 	}
 	public void setComponentes(int componentes){
-		componentes = componentes;
+		this.componentes = componentes;
 	}
 	public int getAno(){
 		return ano;
 	}
 	public void setAno(int ano){
-		ano = ano;
+		this.ano = ano;
 	}
 	public boolean getGanador(){
 		return ganador;
 	}
 	public void setGanador(boolean ganador){
-		ganador = ganador;
+		this.ganador = ganador;
 	}
 }
