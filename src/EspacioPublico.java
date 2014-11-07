@@ -22,7 +22,7 @@ public class EspacioPublico{
 		return direccion;
 	}
 	public double superficie(){
-		double result = 2*this.getAncho()+2*this.getLargo();
+		double result = this.getAncho()*this.getLargo();
 		return result;
 	}
 	

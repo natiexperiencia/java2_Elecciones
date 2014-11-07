@@ -20,7 +20,7 @@ public class Inmueble{
 	}
 
 	public double superficie(){
-		double result = 2*this.getAncho()+2*this.getLargo();
+		double result = this.getAncho()*this.getLargo();
 		return result;
 	}
 
@@ -51,8 +51,8 @@ public class Inmueble{
 	public double getAncho(){
 		return ancho;
 	}
-	public void setLargo(int largo){
-		this.largo = largo;
+	public void setAncho(double ancho){
+		this.ancho = ancho;
 	}
 
 }
