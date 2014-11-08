@@ -285,5 +285,50 @@ public class Main{
 		System.out.println("Lema: "+partido5.getLema());
 		System.out.println("Componentes: "+partido5.getComponentes());
 		System.out.println("Fundado en: "+partido5.getAno());
+
+		File archivo = new File("./listadoPartidos.txt");
+		System.out.println("\nCreando archivo con nombres de los partidos.....");
+		try{
+			if(archivo.createNewFile()){
+				System.out.println("\nArchivo creado correctamente");
+			}
+		}catch(IOException ioe){
+			ioe.printStackTrace();
+		}
+		try{
+			System.out.println("\nEscribiendo en el archivo....");
+			FileWriter escritor = new FileWriter(archivo);
+			escritor.append(partido1.getNombre()+"\n");
+			escritor.append(partido2.getNombre()+"\n");
+			escritor.append(partido3.getNombre()+"\n");
+			escritor.append(partido4.getNombre()+"\n");
+			escritor.append(partido5.getNombre()+"\n");
+			escritor.close();
+			System.out.println("\nArchivo listo para lectura\n");
+		}
+		catch(IOException e){
+					System.out.println("Error: "+e);
+				}
+		try{		
+			FileInputStream fis = new FileInputStream(archivo);
+			InputStreamReader isr = new InputStreamReader(fis, "UTF8");
+       		BufferedReader br = new BufferedReader(isr);
+
+       		ArrayList<String> partidos = new ArrayList<String>();
+
+        	String linea = br.readLine();
+        	while(linea!=null){
+        		partidos.add(linea);
+        		linea=br.readLine();
+        	}
+        	for(int i=0; i<partidos.size(); i++){
+        		System.out.println(partidos.get(i));
+        	}
+		}catch(FileNotFoundException n){
+			System.out.println("Error "+n);    
+        }
+        catch(IOException ie){
+        	System.out.println("Error "+ie);
+        }
 	}
 }
