@@ -324,6 +324,9 @@ public class Main{
         	for(int i=0; i<partidos.size(); i++){
         		System.out.println(partidos.get(i));
         	}
+
+        	System.out.println("\nLimpiando la memoria....");
+        	partidos.clear();
 		}catch(FileNotFoundException n){
 			System.out.println("Error "+n);    
         }
