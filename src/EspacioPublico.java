@@ -53,8 +53,8 @@ public class EspacioPublico{
 	public double getAncho(){
 		return ancho;
 	}
-	public void setLargo(int largo){
-		this.largo = largo;
+	public void setAncho(double ancho){
+		this.ancho = ancho;
 	}
 	public String getTipo(){
 		return tipo;

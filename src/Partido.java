@@ -5,7 +5,7 @@ public class Partido{
 	private int componentes, ano;
 	private boolean ganador;
 
-	public Partido(String nombre, String presidente, String lema, int componentes, int ano, boolean ganador){
+	public Partido(String nombre, String presidente, String lema, int componentes, int ano){
 		nombre = nombre;
 		presidente = presidente;
 		lema = lema;
