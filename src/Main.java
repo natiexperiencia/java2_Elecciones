@@ -5,29 +5,27 @@ public class Main{
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		String nombre, apellido, calleDireccion, nombreInmueble, tipo, alcalde, presidente, lema;
-		int edad, numeroDireccion, poblacion, censo, componentes, ano;
-		double largo, ancho;
-		boolean intemperie, ganador;
+		String opcion = "no",nombre = null, apellido = null, calleDireccion = null, nombreInmueble = null, tipo = null, alcalde = null, presidente = null, lema = null;
+		int edad = 0, numeroDireccion = 0, poblacion = 0, censo = 0, componentes = 0, ano = 0;
+		double largo = 0, ancho = 0;
+		boolean intemperie = false, ganador = false;
 
 //Habitante
-		System.out.println("\nBuenas,\nvamos a crear un habitante...");
-		System.out.println("\nIngresa el nombre: ");
-		nombre = sc.nextLine();
-		System.out.println("\nahora ingresa el apellido: ");
-		apellido = sc.nextLine();
-		System.out.println("\nescribe el nombre de la calle donde vive: ");
-		calleDireccion = sc.nextLine();
-		System.out.println("\nel numero de la calle: ");
-		//try{
+		try{
+			System.out.println("\nBuenas,\nvamos a crear un habitante...");
+			System.out.println("\nIngresa el nombre: ");
+			nombre = sc.nextLine();
+			System.out.println("\nahora ingresa el apellido: ");
+			apellido = sc.nextLine();
+			System.out.println("\nescribe el nombre de la calle donde vive: ");
+			calleDireccion = sc.nextLine();
+			System.out.println("\nel numero de la calle: ");
 			numeroDireccion = sc.nextInt();
-		
-		/*}catch(Exception ioe){
-			System.out.println(ioe);
-			numeroDireccion = 0;
-		}*/
-		System.out.println("\npara acabar introduce la edad: ");
-		edad = sc.nextInt();
+			System.out.println("\npara acabar introduce la edad: ");
+			edad = sc.nextInt();
+		}catch(Exception ioe){
+			System.out.println("Error (0 = null): "+ioe);
+		}
 
 		Habitante uno = new Habitante(nombre, apellido, edad, calleDireccion, numeroDireccion);
 		uno.setNombre(nombre);
@@ -44,18 +42,22 @@ public class Main{
 
 //Inmueble
 
-		System.out.println("\nAhora crearemos un inmueble...");
-		System.out.println("\nIngresa el nombre: ");
-		nombreInmueble = sc.nextLine();		
-		nombreInmueble = sc.nextLine();
-		System.out.println("\nescribe la calle donde está: ");
-		calleDireccion = sc.nextLine();
-		System.out.println("\nel numero de la calle: ");
-		numeroDireccion = sc.nextInt();
-		System.out.println("\n¿cuantos metros tiene de ancho?: ");
-		ancho = sc.nextDouble();
-		System.out.println("\n¿cuantos metros tiene de largo?: ");
-		largo = sc.nextDouble();
+		try{
+			System.out.println("\nAhora crearemos un inmueble...");
+			System.out.println("\nIngresa el nombre: ");
+			nombreInmueble = sc.nextLine();		
+			nombreInmueble = sc.nextLine();
+			System.out.println("\nescribe la calle donde está: ");
+			calleDireccion = sc.nextLine();
+			System.out.println("\nel numero de la calle: ");
+			numeroDireccion = sc.nextInt();
+			System.out.println("\n¿cuantos metros tiene de ancho?: ");
+			ancho = sc.nextDouble();
+			System.out.println("\n¿cuantos metros tiene de largo?: ");
+			largo = sc.nextDouble();
+		}catch(Exception ioe){
+			System.out.println("Error  (0 = null): "+ioe);
+		}
 
 		Inmueble inmueble = new Inmueble(nombreInmueble, calleDireccion, numeroDireccion, largo, ancho);
 
@@ -72,23 +74,34 @@ public class Main{
 		
 //Espacio público
 
-		System.out.println("\nAhora un espacio público...");
-		System.out.println("\nIngresa el nombre: ");
-		nombre = sc.nextLine();
-		nombre = sc.nextLine();
-		System.out.println("\nescribe la calle donde está: ");
-		calleDireccion = sc.nextLine();
-		System.out.println("\nel numero de la calle: ");
-		numeroDireccion = sc.nextInt();
-		System.out.println("\n¿cuantos metros tiene de ancho?: ");
-		ancho = sc.nextDouble();
-		System.out.println("\n¿cuantos metros tiene de largo?: ");
-		largo = sc.nextDouble();
-		System.out.println("\n¿Que tipo de espacio público es?: ");
-		tipo = sc.nextLine();
-		tipo = sc.nextLine();
-		System.out.println("\n¿Esta cubierto?(true/false): ");
-		intemperie = sc.nextBoolean();
+		try{
+			System.out.println("\nAhora un espacio público...");
+			System.out.println("\nIngresa el nombre: ");
+			nombre = sc.nextLine();
+			nombre = sc.nextLine();
+			System.out.println("\nescribe la calle donde está: ");
+			calleDireccion = sc.nextLine();
+			System.out.println("\nel numero de la calle: ");
+			numeroDireccion = sc.nextInt();
+			System.out.println("\n¿cuantos metros tiene de ancho?: ");
+			ancho = sc.nextDouble();
+			System.out.println("\n¿cuantos metros tiene de largo?: ");
+			largo = sc.nextDouble();
+			System.out.println("\n¿Que tipo de espacio público es?: ");
+			tipo = sc.nextLine();
+			tipo = sc.nextLine();
+			do{
+				System.out.println("\n¿Esta a la intemperie?(si/no): ");
+				opcion = sc.nextLine();
+			}while(!opcion.equalsIgnoreCase("si") && !opcion.equalsIgnoreCase("no"));
+			if(opcion.equalsIgnoreCase("si")){
+				intemperie = true;
+			}else{
+				intemperie = false;
+			}
+		}catch(Exception ioe){
+			System.out.println("Error  (0 = null)(intemperie = no: "+ioe);
+		}
 
 		EspacioPublico espacio = new EspacioPublico(nombre, tipo, calleDireccion, numeroDireccion, ancho, largo, intemperie);
 
@@ -105,23 +118,32 @@ public class Main{
 		System.out.println("\nDireccion: "+espacio.direccion());
 		System.out.println("\nSuperficie: "+espacio.superficie());
 		System.out.println("\nTipo: "+espacio.getTipo());
-		System.out.println("\n¿Tiene techo?: "+espacio.getIntemperie());
+		if(intemperie = true){
+			System.out.println("\nEl espacio está a la intemperie.");
+		}else{
+			System.out.println("\nEl espacio está cubierto.");
+		}
 
 //Ayuntamiento
-		System.out.println("\nAhora crearemos un Ayuntamiento...");
-		System.out.println("\nescribe el nombre del Ayuntamiento: ");
-		nombre = sc.nextLine();
-		nombre = sc.nextLine();
-		System.out.println("escribe la calle donde está: ");
-		calleDireccion = sc.nextLine();
-		System.out.println("escribe el numero de la calle: ");
-		numeroDireccion = sc.nextInt();
-		System.out.println("escribe el nombre del alcalde: ");
-		alcalde = sc.nextLine();
-		System.out.println("¿Cuantos habitantes tiene el pueblo del Ayuntamiento en cuestión?: ");
-		poblacion = sc.nextInt();
-		System.out.println("\n¿cuantos de esos habitantes pueden votar (censados): ");
-		censo = sc.nextInt();
+
+		try{
+			System.out.println("\nAhora crearemos un Ayuntamiento...");
+			System.out.println("\nescribe el nombre del Ayuntamiento: ");
+			nombre = sc.nextLine();
+			nombre = sc.nextLine();
+			System.out.println("escribe la calle donde está: ");
+			calleDireccion = sc.nextLine();
+			System.out.println("escribe el numero de la calle: ");
+			numeroDireccion = sc.nextInt();
+			System.out.println("escribe el nombre del alcalde: ");
+			alcalde = sc.nextLine();
+			System.out.println("¿Cuantos habitantes tiene el pueblo del Ayuntamiento en cuestión?: ");
+			poblacion = sc.nextInt();
+			System.out.println("\n¿cuantos de esos habitantes pueden votar (censados): ");
+			censo = sc.nextInt();
+		}catch(Exception ioe){
+			System.out.println("Error  (0 = null): "+ioe);
+		}
 
 		Ayuntamiento ayunta = new Ayuntamiento(nombre, alcalde, calleDireccion, numeroDireccion, poblacion, censo);
 
@@ -142,18 +164,22 @@ public class Main{
 //Partidos
 		//Partido1
 
-		System.out.println("\nPor último vamos a crear 5 partidos políticos diferentes...");
-		System.out.println("\nEscribe el nombre del primer partido: ");
-		nombre = sc.nextLine();
-		nombre = sc.nextLine();
-		System.out.println("\nEscribe el nombre del presidente: ");
-		presidente = sc.nextLine();
-		System.out.println("\nEscribe el lema del partido: ");
-		lema = sc.nextLine();
-		System.out.println("\n¿Cuantas personas componen el partido?: ");
-		componentes = sc.nextInt();
-		System.out.println("¿En que año se fundó?: ");
-		ano = sc.nextInt();
+		try{
+			System.out.println("\nPor último vamos a crear 5 partidos políticos diferentes...");
+			System.out.println("\nEscribe el nombre del primer partido: ");
+			nombre = sc.nextLine();
+			nombre = sc.nextLine();
+			System.out.println("\nEscribe el nombre del presidente: ");
+			presidente = sc.nextLine();
+			System.out.println("\nEscribe el lema del partido: ");
+			lema = sc.nextLine();
+			System.out.println("\n¿Cuantas personas componen el partido?: ");
+			componentes = sc.nextInt();
+			System.out.println("¿En que año se fundó?: ");
+			ano = sc.nextInt();
+		}catch(Exception ioe){
+			System.out.println("Error  (0 = null)");
+		}
 
 		Partido partido1 = new Partido(nombre, presidente, lema, componentes, ano);
 
@@ -172,17 +198,21 @@ public class Main{
 
 		//partido2
 
-		System.out.println("\nEscribe el nombre del segundo partido: ");
-		nombre = sc.nextLine();
-		nombre = sc.nextLine();
-		System.out.println("\nEscribe el nombre del presidente: ");
-		presidente = sc.nextLine();
-		System.out.println("\nEscribe el lema del partido: ");
-		lema = sc.nextLine();
-		System.out.println("\n¿Cuantas personas componen el partido?: ");
-		componentes = sc.nextInt();
-		System.out.println("¿En que año se fundó?: ");
-		ano = sc.nextInt();
+		try{
+			System.out.println("\nEscribe el nombre del segundo partido: ");
+			nombre = sc.nextLine();
+			nombre = sc.nextLine();
+			System.out.println("\nEscribe el nombre del presidente: ");
+			presidente = sc.nextLine();
+			System.out.println("\nEscribe el lema del partido: ");
+			lema = sc.nextLine();
+			System.out.println("\n¿Cuantas personas componen el partido?: ");
+			componentes = sc.nextInt();
+			System.out.println("¿En que año se fundó?: ");
+			ano = sc.nextInt();
+		}catch(Exception ioe){
+			System.out.println("Error  (0 = null): ");
+		}
 
 		Partido partido2 = new Partido(nombre, presidente, lema, componentes, ano);
 
@@ -201,17 +231,21 @@ public class Main{
 
 		//Partido3
 
-		System.out.println("\nEscribe el nombre del tercer partido: ");
-		nombre = sc.nextLine();
-		nombre = sc.nextLine();
-		System.out.println("\nEscribe el nombre del presidente: ");
-		presidente = sc.nextLine();
-		System.out.println("\nEscribe el lema del partido: ");
-		lema = sc.nextLine();
-		System.out.println("\n¿Cuantas personas componen el partido?: ");
-		componentes = sc.nextInt();
-		System.out.println("¿En que año se fundó?: ");
-		ano = sc.nextInt();
+		try{
+			System.out.println("\nEscribe el nombre del tercer partido: ");
+			nombre = sc.nextLine();
+			nombre = sc.nextLine();
+			System.out.println("\nEscribe el nombre del presidente: ");
+			presidente = sc.nextLine();
+			System.out.println("\nEscribe el lema del partido: ");
+			lema = sc.nextLine();
+			System.out.println("\n¿Cuantas personas componen el partido?: ");
+			componentes = sc.nextInt();
+			System.out.println("¿En que año se fundó?: ");
+			ano = sc.nextInt();
+		}catch(Exception ioe){
+			System.out.println("Error  (0 = null): ");
+		}
 
 		Partido partido3 = new Partido(nombre, presidente, lema, componentes, ano);
 
@@ -230,17 +264,21 @@ public class Main{
 
 		//Partido 4
 
-		System.out.println("\nEscribe el nombre del cuarto partido: ");
-		nombre = sc.nextLine();
-		nombre = sc.nextLine();
-		System.out.println("\nEscribe el nombre del presidente: ");
-		presidente = sc.nextLine();
-		System.out.println("\nEscribe el lema del partido: ");
-		lema = sc.nextLine();
-		System.out.println("\n¿Cuantas personas componen el partido?: ");
-		componentes = sc.nextInt();
-		System.out.println("¿En que año se fundó?: ");
-		ano = sc.nextInt();
+		try{
+			System.out.println("\nEscribe el nombre del cuarto partido: ");
+			nombre = sc.nextLine();
+			nombre = sc.nextLine();
+			System.out.println("\nEscribe el nombre del presidente: ");
+			presidente = sc.nextLine();
+			System.out.println("\nEscribe el lema del partido: ");
+			lema = sc.nextLine();
+			System.out.println("\n¿Cuantas personas componen el partido?: ");
+			componentes = sc.nextInt();
+			System.out.println("¿En que año se fundó?: ");
+			ano = sc.nextInt();
+		}catch(Exception ioe){
+			System.out.println("Error  (0 = null): ");
+		}
 
 		Partido partido4 = new Partido(nombre, presidente, lema, componentes, ano);
 
@@ -259,17 +297,21 @@ public class Main{
 
 		//Partido 5
 
-		System.out.println("\nEscribe el nombre del quinto partido: ");
-		nombre = sc.nextLine();
-		nombre = sc.nextLine();
-		System.out.println("\nEscribe el nombre del presidente: ");
-		presidente = sc.nextLine();
-		System.out.println("\nEscribe el lema del partido: ");
-		lema = sc.nextLine();
-		System.out.println("\n¿Cuantas personas componen el partido?: ");
-		componentes = sc.nextInt();
-		System.out.println("¿En que año se fundó?: ");
-		ano = sc.nextInt();
+		try{
+			System.out.println("\nEscribe el nombre del quinto partido: ");
+			nombre = sc.nextLine();
+			nombre = sc.nextLine();
+			System.out.println("\nEscribe el nombre del presidente: ");
+			presidente = sc.nextLine();
+			System.out.println("\nEscribe el lema del partido: ");
+			lema = sc.nextLine();
+			System.out.println("\n¿Cuantas personas componen el partido?: ");
+			componentes = sc.nextInt();
+			System.out.println("¿En que año se fundó?: ");
+			ano = sc.nextInt();
+		}catch(Exception ioe){
+			System.out.println("Error  (0 = null): ");
+		}
 
 		Partido partido5 = new Partido(nombre, presidente, lema, componentes, ano);
 
