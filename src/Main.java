@@ -35,10 +35,12 @@ public class Main{
 		uno.setNumeroDireccion(numeroDireccion);
 
 		System.out.println("\nAqui tu habitante: ");
+		System.out.println("--------------------------------------");
 		System.out.println("Nombre: "+uno.getNombre());
 		System.out.println("Apellido: "+uno.getApellido());
 		System.out.println("Edad:"+uno.getEdad());
 		System.out.println("Direccion: "+uno.direccion());
+		System.out.println("--------------------------------------");
 
 //Inmueble
 
@@ -68,9 +70,11 @@ public class Main{
 		inmueble.setAncho(ancho);
 
 		System.out.println("\nTu inmueble ha sido creado: ");
+		System.out.println("--------------------------------------");
 		System.out.println("\nNombre: "+inmueble.getNombre());
 		System.out.println("Direccion: "+inmueble.direccion());
 		System.out.println("Superficie: "+inmueble.superficie());
+		System.out.println("--------------------------------------");
 		
 //Espacio público
 
@@ -114,6 +118,7 @@ public class Main{
 		espacio.setIntemperie(intemperie);
 
 		System.out.println("\nEl espacio público...");
+		System.out.println("--------------------------------------");
 		System.out.println("\nNombre: "+espacio.getNombre());
 		System.out.println("\nDireccion: "+espacio.direccion());
 		System.out.println("\nSuperficie: "+espacio.superficie());
@@ -123,6 +128,7 @@ public class Main{
 		}else{
 			System.out.println("\nEl espacio está cubierto.");
 		}
+		System.out.println("--------------------------------------");
 
 //Ayuntamiento
 
@@ -130,12 +136,12 @@ public class Main{
 			System.out.println("\nAhora crearemos un Ayuntamiento...");
 			System.out.println("\nescribe el nombre del Ayuntamiento: ");
 			nombre = sc.nextLine();
-			nombre = sc.nextLine();
 			System.out.println("escribe la calle donde está: ");
 			calleDireccion = sc.nextLine();
 			System.out.println("escribe el numero de la calle: ");
 			numeroDireccion = sc.nextInt();
 			System.out.println("escribe el nombre del alcalde: ");
+			alcalde = sc.nextLine();
 			alcalde = sc.nextLine();
 			System.out.println("¿Cuantos habitantes tiene el pueblo del Ayuntamiento en cuestión?: ");
 			poblacion = sc.nextInt();
@@ -155,11 +161,13 @@ public class Main{
 		ayunta.setCenso(censo);
 
 		System.out.println("\nEste es tu Ayuntamiento...");
+		System.out.println("--------------------------------------");
 		System.out.println("\nNombre: "+ayunta.getNombre());
 		System.out.println("Alaclde: "+ayunta.getAlcalde());
 		System.out.println("Direccion: "+ayunta.direccion());
 		System.out.println("Poblacion: "+ayunta.getPoblacion());
 		System.out.println("Censo: "+ayunta.getCenso());
+		System.out.println("--------------------------------------");
 
 //Partidos
 		//Partido1
@@ -190,11 +198,13 @@ public class Main{
 		partido1.setAno(ano);
 
 		System.out.println("\nEl partido número 1...");
+		System.out.println("--------------------------------------");
 		System.out.println("\nNombre: "+partido1.getNombre());
 		System.out.println("Presidente: "+partido1.getPresidente());
 		System.out.println("Lema: "+partido1.getLema());
 		System.out.println("Componentes: "+partido1.getComponentes());
 		System.out.println("Fundado en: "+partido1.getAno());
+		System.out.println("--------------------------------------");
 
 		//partido2
 
@@ -223,11 +233,13 @@ public class Main{
 		partido2.setAno(ano);
 
 		System.out.println("\nEl partido número 2...");
+		System.out.println("--------------------------------------");
 		System.out.println("\nNombre: "+partido2.getNombre());
 		System.out.println("Presidente: "+partido2.getPresidente());
 		System.out.println("Lema: "+partido2.getLema());
 		System.out.println("Componentes: "+partido2.getComponentes());
 		System.out.println("Fundado en: "+partido2.getAno());
+		System.out.println("--------------------------------------");
 
 		//Partido3
 
@@ -256,11 +268,13 @@ public class Main{
 		partido3.setAno(ano);
 
 		System.out.println("\nEl partido número 3...");
+		System.out.println("--------------------------------------");
 		System.out.println("\nNombre: "+partido3.getNombre());
 		System.out.println("Presidente: "+partido3.getPresidente());
 		System.out.println("Lema: "+partido3.getLema());
 		System.out.println("Componentes: "+partido3.getComponentes());
 		System.out.println("Fundado en: "+partido3.getAno());
+		System.out.println("--------------------------------------");
 
 		//Partido 4
 
@@ -289,11 +303,13 @@ public class Main{
 		partido4.setAno(ano);
 
 		System.out.println("\nEl partido número 4...");
+		System.out.println("--------------------------------------");
 		System.out.println("\nNombre: "+partido4.getNombre());
 		System.out.println("Presidente: "+partido4.getPresidente());
 		System.out.println("Lema: "+partido4.getLema());
 		System.out.println("Componentes: "+partido4.getComponentes());
 		System.out.println("Fundado en: "+partido4.getAno());
+		System.out.println("--------------------------------------");
 
 		//Partido 5
 
@@ -322,11 +338,13 @@ public class Main{
 		partido5.setAno(ano);
 
 		System.out.println("\nEl partido número 5...");
+		System.out.println("--------------------------------------");
 		System.out.println("\nNombre: "+partido5.getNombre());
 		System.out.println("Presidente: "+partido5.getPresidente());
 		System.out.println("Lema: "+partido5.getLema());
 		System.out.println("Componentes: "+partido5.getComponentes());
 		System.out.println("Fundado en: "+partido5.getAno());
+		System.out.println("--------------------------------------");
 
 		File archivo = new File("./listadoPartidos.txt");
 		System.out.println("\nCreando archivo con nombres de los partidos.....");
