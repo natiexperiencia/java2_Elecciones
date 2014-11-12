@@ -10,7 +10,7 @@ public class Main{
 		double largo = 0, ancho = 0;
 		boolean intemperie = false, ganador = false;
 
-//Habitante
+//Habitante1
 		try{
 			System.out.println("\nBuenas,\nvamos a crear un habitante...");
 			System.out.println("\nIngresa el nombre: ");
@@ -42,7 +42,139 @@ public class Main{
 		System.out.println("Direccion: "+uno.direccion());
 		System.out.println("--------------------------------------");
 
+//Habitente2
+		try{
+			System.out.println("\nVamos a crear un segundo habitante...");
+			System.out.println("\nIngresa el nombre: ");
+			nombre = sc.nextLine();
+			nombre = sc.nextLine();
+			System.out.println("\nahora ingresa el apellido: ");
+			apellido = sc.nextLine();
+			System.out.println("\nescribe el nombre de la calle donde vive: ");
+			calleDireccion = sc.nextLine();
+			System.out.println("\nel numero de la calle: ");
+			numeroDireccion = sc.nextInt();
+			System.out.println("\npara acabar introduce la edad: ");
+			edad = sc.nextInt();
+		}catch(Exception ioe){
+			System.out.println("Error (0 = null): "+ioe);
+		}
+
+		Habitante dos = new Habitante(nombre, apellido, edad, calleDireccion, numeroDireccion);
+		dos.setNombre(nombre);
+		dos.setApellido(apellido);
+		dos.setEdad(edad);
+		dos.setCalleDireccion(calleDireccion);
+		dos.setNumeroDireccion(numeroDireccion);
+
+		System.out.println("\nAqui tu habitante: ");
+		System.out.println("--------------------------------------");
+		System.out.println("Nombre: "+dos.getNombre());
+		System.out.println("Apellido: "+dos.getApellido());
+		System.out.println("Edad:"+dos.getEdad());
+		System.out.println("Direccion: "+dos.direccion());
+		System.out.println("--------------------------------------");
+
+//Habitente3
+		try{
+			System.out.println("\nVamos a crear un tercer habitante...");
+			System.out.println("\nIngresa el nombre: ");
+			nombre = sc.nextLine();
+			nombre = sc.nextLine();
+			System.out.println("\nahora ingresa el apellido: ");
+			apellido = sc.nextLine();
+			System.out.println("\nescribe el nombre de la calle donde vive: ");
+			calleDireccion = sc.nextLine();
+			System.out.println("\nel numero de la calle: ");
+			numeroDireccion = sc.nextInt();
+			System.out.println("\npara acabar introduce la edad: ");
+			edad = sc.nextInt();
+		}catch(Exception ioe){
+			System.out.println("Error (0 = null): "+ioe);
+		}
+
+		Habitante tres = new Habitante(nombre, apellido, edad, calleDireccion, numeroDireccion);
+		tres.setNombre(nombre);
+		tres.setApellido(apellido);
+		tres.setEdad(edad);
+		tres.setCalleDireccion(calleDireccion);
+		tres.setNumeroDireccion(numeroDireccion);
+
+		System.out.println("\nAqui tu habitante: ");
+		System.out.println("--------------------------------------");
+		System.out.println("Nombre: "+tres.getNombre());
+		System.out.println("Apellido: "+tres.getApellido());
+		System.out.println("Edad:"+tres.getEdad());
+		System.out.println("Direccion: "+tres.direccion());
+		System.out.println("--------------------------------------");
+
+//Habitente4
+		try{
+			System.out.println("\nVamos a crear un cuarto habitante...");
+			System.out.println("\nIngresa el nombre: ");
+			nombre = sc.nextLine();
+			nombre = sc.nextLine();
+			System.out.println("\nahora ingresa el apellido: ");
+			apellido = sc.nextLine();
+			System.out.println("\nescribe el nombre de la calle donde vive: ");
+			calleDireccion = sc.nextLine();
+			System.out.println("\nel numero de la calle: ");
+			numeroDireccion = sc.nextInt();
+			System.out.println("\npara acabar introduce la edad: ");
+			edad = sc.nextInt();
+		}catch(Exception ioe){
+			System.out.println("Error (0 = null): "+ioe);
+		}
+
+		Habitante cuatro = new Habitante(nombre, apellido, edad, calleDireccion, numeroDireccion);
+		cuatro.setNombre(nombre);
+		cuatro.setApellido(apellido);
+		cuatro.setEdad(edad);
+		cuatro.setCalleDireccion(calleDireccion);
+		cuatro.setNumeroDireccion(numeroDireccion);
+
+		System.out.println("\nAqui tu habitante: ");
+		System.out.println("--------------------------------------");
+		System.out.println("Nombre: "+cuatro.getNombre());
+		System.out.println("Apellido: "+cuatro.getApellido());
+		System.out.println("Edad:"+cuatro.getEdad());
+		System.out.println("Direccion: "+cuatro.direccion());
+		System.out.println("--------------------------------------");
+
+//Habitente5
+		try{
+			System.out.println("\nVamos a crear un quinto habitante...");
+			System.out.println("\nIngresa el nombre: ");
+			nombre = sc.nextLine();
+			nombre = sc.nextLine();
+			System.out.println("\nahora ingresa el apellido: ");
+			apellido = sc.nextLine();
+			System.out.println("\nescribe el nombre de la calle donde vive: ");
+			calleDireccion = sc.nextLine();
+			System.out.println("\nel numero de la calle: ");
+			numeroDireccion = sc.nextInt();
+			System.out.println("\npara acabar introduce la edad: ");
+			edad = sc.nextInt();
+		}catch(Exception ioe){
+			System.out.println("Error (0 = null): "+ioe);
+		}
+
+		Habitante cinco = new Habitante(nombre, apellido, edad, calleDireccion, numeroDireccion);
+		cinco.setNombre(nombre);
+		cinco.setApellido(apellido);
+		cinco.setEdad(edad);
+		cinco.setCalleDireccion(calleDireccion);
+		cinco.setNumeroDireccion(numeroDireccion);
+
+		System.out.println("\nAqui tu habitante: ");
+		System.out.println("--------------------------------------");
+		System.out.println("Nombre: "+cinco.getNombre());
+		System.out.println("Apellido: "+cinco.getApellido());
+		System.out.println("Edad:"+cinco.getEdad());
+		System.out.println("Direccion: "+cinco.direccion());
+		System.out.println("--------------------------------------");
 //Inmueble
+
 
 		try{
 			System.out.println("\nAhora crearemos un inmueble...");
@@ -346,6 +478,7 @@ public class Main{
 		System.out.println("Fundado en: "+partido5.getAno());
 		System.out.println("--------------------------------------");
 
+//Crear archivo listadoPartidos.txt
 		File archivo = new File("./listadoPartidos.txt");
 		System.out.println("\nCreando archivo con nombres de los partidos.....");
 		try{
@@ -355,20 +488,61 @@ public class Main{
 		}catch(IOException ioe){
 			ioe.printStackTrace();
 		}
+
+//Escribir en listadoPartidos.txt atributos separados por comas
 		try{
-			System.out.println("\nEscribiendo en el archivo....");
+			System.out.println("\nEscribiendo en el archivo 'listadoPartidos.txt'....");
 			FileWriter escritor = new FileWriter(archivo);
-			escritor.append(partido1.getNombre()+"\n");
-			escritor.append(partido2.getNombre()+"\n");
-			escritor.append(partido3.getNombre()+"\n");
-			escritor.append(partido4.getNombre()+"\n");
-			escritor.append(partido5.getNombre()+"\n");
+			escritor.append(partido1.getNombre()+","+partido1.getPresidente()+","+partido1.getLema()+","+partido1.getComponentes()+","+partido1.getAno()+"\n");
+			escritor.append(partido2.getNombre()+","+partido2.getPresidente()+","+partido2.getLema()+","+partido2.getComponentes()+","+partido2.getAno()+"\n");
+			escritor.append(partido3.getNombre()+","+partido3.getPresidente()+","+partido3.getLema()+","+partido3.getComponentes()+","+partido3.getAno()+"\n");
+			escritor.append(partido4.getNombre()+","+partido4.getPresidente()+","+partido4.getLema()+","+partido4.getComponentes()+","+partido4.getAno()+"\n");
+			escritor.append(partido5.getNombre()+","+partido5.getPresidente()+","+partido5.getLema()+","+partido5.getComponentes()+","+partido5.getAno()+"\n");
 			escritor.close();
 			System.out.println("\nArchivo listo para lectura\n");
 		}
 		catch(IOException e){
 					System.out.println("Error: "+e);
 				}
+
+//Crear archivo censo.txt
+		File archivoCenso = new File("./censo.txt");
+		System.out.println("\nCreando archivo con datos de habitantes");
+		try{
+			if(archivoCenso.createNewFile()){
+				System.out.println("\nArchivo creado correctamente");
+			}
+		}catch(IOException ioe){
+			ioe.printStackTrace();
+		}
+
+//Escribir en archivo censo.txt datos de habitantes
+
+		try{
+			System.out.println("\nEscribiendo en el archivo 'censo.txt'....");
+			FileWriter escritorCenso = new FileWriter(archivoCenso);
+			if(uno.getEdad()>=18){
+				escritorCenso.append(uno.getNombre()+","+uno.getApellido()+","+uno.getEdad()+","+uno.direccion()+"\n");
+			}
+			if(dos.getEdad()>=18){
+				escritorCenso.append(dos.getNombre()+","+dos.getApellido()+","+dos.getEdad()+","+dos.direccion()+"\n");
+			}
+			if(tres.getEdad()>=18){
+				escritorCenso.append(tres.getNombre()+","+tres.getApellido()+","+tres.getEdad()+","+tres.direccion()+"\n");
+			}
+			if(cuatro.getEdad()>=18){
+				escritorCenso.append(cuatro.getNombre()+","+cuatro.getApellido()+","+cuatro.getEdad()+","+cuatro.direccion()+"\n");
+			}
+			if(cinco.getEdad()>=18){
+				escritorCenso.append(cinco.getNombre()+","+cinco.getApellido()+","+cinco.getEdad()+","+cinco.direccion()+"\n");
+			}
+			escritorCenso.close();
+			System.out.println("\nArchivo listo para lectura");
+		}catch(IOException e){
+			System.out.println("Error: "+e);
+		}
+
+//Leer lineas del archivo listadoPartidos.txt
 		try{		
 			FileInputStream fis = new FileInputStream(archivo);
 			InputStreamReader isr = new InputStreamReader(fis, "UTF8");
@@ -381,6 +555,9 @@ public class Main{
         		partidos.add(linea);
         		linea=br.readLine();
         	}
+
+//Mostrar lineas leidas del archivo listadoPartidos.txt
+        	System.out.println("\nContenido de archivo listadoPartidos.txt: ");
         	for(int i=0; i<partidos.size(); i++){
         		System.out.println(partidos.get(i));
         	}
@@ -392,6 +569,35 @@ public class Main{
         }
         catch(IOException ie){
         	System.out.println("Error "+ie);
+        }
+
+//Leer lineas del contenido del archivo censo.txt
+        try{
+        	FileInputStream fis = new FileInputStream(archivoCenso);
+        	InputStreamReader isr = new InputStreamReader(fis, "UTF8");
+        	BufferedReader br = new BufferedReader(isr);
+
+        	ArrayList<String> habitantes = new ArrayList<String>();
+
+        	String linea = br.readLine();
+        	while(linea!=null){
+        		habitantes.add(linea);
+        		linea=br.readLine();
+        	}
+
+//Mostrar lineas leidas desde censo.txt
+        	System.out.println("\nContenido archivo censo.txt: ");
+        	for(int i=0; i<habitantes.size(); i++){
+        		System.out.println(habitantes.get(i));
+        	}
+        	System.out.println("\nLimpiando la memoria.....");
+        	habitantes.clear();
+        
+        }catch(FileNotFoundException ie){
+        	System.out.println("Error: "+ie);
+        }
+        catch(IOException n){
+        	System.out.println("Error: "+n);
         }
 	}
 }
