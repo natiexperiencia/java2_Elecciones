@@ -1,0 +1,4 @@
+iker,oñatibia,32,arrobitxulo,11
+pepe,garcia,17,mayor,21
+tronkito,palito,19,esperanza,3
+otro,mas,21,algunsitio,31

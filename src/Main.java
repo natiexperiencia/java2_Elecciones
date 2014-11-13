@@ -521,21 +521,12 @@ public class Main{
 		try{
 			System.out.println("\nEscribiendo en el archivo 'censo.txt'....");
 			FileWriter escritorCenso = new FileWriter(archivoCenso);
-			if(uno.getEdad()>=18){
-				escritorCenso.append(uno.getNombre()+","+uno.getApellido()+","+uno.getEdad()+","+uno.direccion()+"\n");
-			}
-			if(dos.getEdad()>=18){
-				escritorCenso.append(dos.getNombre()+","+dos.getApellido()+","+dos.getEdad()+","+dos.direccion()+"\n");
-			}
-			if(tres.getEdad()>=18){
-				escritorCenso.append(tres.getNombre()+","+tres.getApellido()+","+tres.getEdad()+","+tres.direccion()+"\n");
-			}
-			if(cuatro.getEdad()>=18){
-				escritorCenso.append(cuatro.getNombre()+","+cuatro.getApellido()+","+cuatro.getEdad()+","+cuatro.direccion()+"\n");
-			}
-			if(cinco.getEdad()>=18){
-				escritorCenso.append(cinco.getNombre()+","+cinco.getApellido()+","+cinco.getEdad()+","+cinco.direccion()+"\n");
-			}
+			
+			escritorCenso.append(uno.getNombre()+","+uno.getApellido()+","+uno.getEdad()+","+uno.direccion()+"\n");
+			escritorCenso.append(dos.getNombre()+","+dos.getApellido()+","+dos.getEdad()+","+dos.direccion()+"\n");
+			escritorCenso.append(tres.getNombre()+","+tres.getApellido()+","+tres.getEdad()+","+tres.direccion()+"\n");
+			escritorCenso.append(cuatro.getNombre()+","+cuatro.getApellido()+","+cuatro.getEdad()+","+cuatro.direccion()+"\n");
+			escritorCenso.append(cinco.getNombre()+","+cinco.getApellido()+","+cinco.getEdad()+","+cinco.direccion()+"\n");
 			escritorCenso.close();
 			System.out.println("\nArchivo listo para lectura");
 		}catch(IOException e){
@@ -599,5 +590,76 @@ public class Main{
         catch(IOException n){
         	System.out.println("Error: "+n);
         }
-	}
+
+//Leer desde archivo listadoPartidos.txt, separar los campos y crear objetos de tipo partido con los atributos leidos y separados
+        try{
+
+        	File listaPartidos = new File("./listadoPartidos.txt");
+        	FileInputStream fis = new FileInputStream(listaPartidos);
+        	InputStreamReader isr = new InputStreamReader(fis, "UTF8");
+        	BufferedReader br = new BufferedReader(isr);
+        	ArrayList<Partido> partidosCompletos = new ArrayList<Partido>();
+
+        	String linea;
+
+        	linea = br.readLine();
+        	while(linea!=null){
+        		String [] campos = linea.split(",");
+        		Partido partido = new Partido(null,null,null,0,0);
+        		partido.setNombre(campos[0]);
+        		partido.setPresidente(campos[1]);
+        		partido.setLema(campos[2]);
+        		int compo = Integer.parseInt(campos[3]);
+        		partido.setComponentes(compo);
+        		int an = Integer.parseInt(campos[4]);
+        		partido.setAno(an);
+        		partidosCompletos.add(partido);
+        		linea = br.readLine();
+
+
+        	}
+       	}catch(FileNotFoundException e){
+       		System.out.println("Error: "+e);
+       	}
+       	catch(IOException ioe){
+       		System.out.println("Error: "+ioe);
+       	}
+       	System.out.println("\nObjetos de tipo partido en ArrayList insertados correctamente...");
+    
+
+//Leer desde archivo listaHabitantes.txt creado por cualquiera, separar los campos y crear objetos de tipo habitante con los atributos leidos y separados
+    	try{
+    		File listaHabitantes = new File("./listaHabitantes.txt");
+    		FileInputStream fis = new FileInputStream(listaHabitantes);
+    		InputStreamReader isr = new InputStreamReader(fis);
+    		BufferedReader br = new BufferedReader(isr);
+    		ArrayList<Habitante> habitantesCompletos = new ArrayList<Habitante>();
+
+    		String linea;
+
+    		linea = br.readLine();
+    		while(linea!=null){
+    			String [] campos = linea.split(",");
+    			int ed = Integer.parseInt(campos[2]);
+    			if(ed>=18){
+	    			Habitante habitante = new Habitante(null,null,0,null,0);
+	    			habitante.setNombre(campos[0]);
+	    			habitante.setApellido(campos[1]);
+	    			
+	    			habitante.setEdad(ed);
+	    			habitante.setCalleDireccion(campos[3]);
+	    			int num = Integer.parseInt(campos[4]);
+	    			habitante.setNumeroDireccion(num);
+	    			habitantesCompletos.add(habitante);
+	    			linea = br.readLine();
+	    		}linea = br.readLine();
+    		}
+    	}catch(FileNotFoundException e){
+    		System.out.println("Error: "+e);
+    	}
+    	catch(IOException ioe){
+    		System.out.println("Error: "+ioe);
+    	}
+    	System.out.println("\nObjetos de tipo habitante en ArrayList insertados correctamente...");
+    }
 }
