@@ -255,7 +255,7 @@ public class Main{
 		System.out.println("\nDireccion: "+espacio.direccion());
 		System.out.println("\nSuperficie: "+espacio.superficie());
 		System.out.println("\nTipo: "+espacio.getTipo());
-		if(intemperie = true){
+		if(intemperie == true){
 			System.out.println("\nEl espacio está a la intemperie.");
 		}else{
 			System.out.println("\nEl espacio está cubierto.");
