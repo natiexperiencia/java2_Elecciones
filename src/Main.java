@@ -627,7 +627,11 @@ public class Main{
        	System.out.println("\nObjetos de tipo partido en ArrayList insertados correctamente...");
     
 
-//Leer desde archivo listaHabitantes.txt creado por cualquiera, separar los campos y crear objetos de tipo habitante con los atributos leidos y separados
+//Leer desde archivo listaHabitantes.txt creado por cualquiera, separar los campos y crear objetos
+//de tipo habitante con los atributos leidos y separados
+    	
+//Utilizamos un ArrayList de tipo objeto, para cada "for" que realice el programa guardará en dicho Array 
+//un objeto de tipo habitante con sus atributos
     	try{
     		File listaHabitantes = new File("./listaHabitantes.txt");
     		FileInputStream fis = new FileInputStream(listaHabitantes);
@@ -654,6 +658,13 @@ public class Main{
 	    			linea = br.readLine();
 	    		}linea = br.readLine();
     		}
+    		for(int i=0; i < habitantesCompletos.size(); i++){
+    			System.out.println((habitantesCompletos.get(i)).getNombre());
+    			System.out.println((habitantesCompletos.get(i)).getApellido());
+    			System.out.println((habitantesCompletos.get(i)).getEdad());
+    			System.out.println((habitantesCompletos.get(i)).direccion());
+    		}
+
     	}catch(FileNotFoundException e){
     		System.out.println("Error: "+e);
     	}
@@ -661,5 +672,7 @@ public class Main{
     		System.out.println("Error: "+ioe);
     	}
     	System.out.println("\nObjetos de tipo habitante en ArrayList insertados correctamente...");
+
+    	
     }
 }
