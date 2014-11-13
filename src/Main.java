@@ -658,11 +658,14 @@ public class Main{
 	    			linea = br.readLine();
 	    		}linea = br.readLine();
     		}
+    		System.out.println("\nLista de los habitantes con derecho a votar: \n\n");
     		for(int i=0; i < habitantesCompletos.size(); i++){
-    			System.out.println((habitantesCompletos.get(i)).getNombre());
-    			System.out.println((habitantesCompletos.get(i)).getApellido());
-    			System.out.println((habitantesCompletos.get(i)).getEdad());
-    			System.out.println((habitantesCompletos.get(i)).direccion());
+    			System.out.println("--------------------------------------------");
+    			System.out.println("Nombre: "+(habitantesCompletos.get(i)).getNombre());
+    			System.out.println("Apellidos: "+(habitantesCompletos.get(i)).getApellido());
+    			System.out.println("Edad: "+(habitantesCompletos.get(i)).getEdad());
+    			System.out.println("Direccion: "+(habitantesCompletos.get(i)).direccion());
+    			System.out.println("--------------------------------------------");
     		}
 
     	}catch(FileNotFoundException e){
