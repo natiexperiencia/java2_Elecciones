@@ -15,13 +15,13 @@ public class Main{
 			System.out.println("\nBuenas,\nvamos a crear un habitante...");
 			System.out.println("\nIngresa el nombre: ");
 			nombre = sc.nextLine();
-			System.out.println("\nahora ingresa el apellido: ");
+			System.out.println("\nAhora ingresa el apellido: ");
 			apellido = sc.nextLine();
-			System.out.println("\nescribe el nombre de la calle donde vive: ");
+			System.out.println("\nEscribe el nombre de la calle donde vive: ");
 			calleDireccion = sc.nextLine();
-			System.out.println("\nel numero de la calle: ");
+			System.out.println("\nEl numero de la calle: ");
 			numeroDireccion = sc.nextInt();
-			System.out.println("\npara acabar introduce la edad: ");
+			System.out.println("\nPara acabar introduce la edad: ");
 			edad = sc.nextInt();
 		}catch(Exception ioe){
 			System.out.println("Error (0 = null): "+ioe);
@@ -48,13 +48,13 @@ public class Main{
 			System.out.println("\nIngresa el nombre: ");
 			nombre = sc.nextLine();
 			nombre = sc.nextLine();
-			System.out.println("\nahora ingresa el apellido: ");
+			System.out.println("\nAhora ingresa el apellido: ");
 			apellido = sc.nextLine();
-			System.out.println("\nescribe el nombre de la calle donde vive: ");
+			System.out.println("\nEscribe el nombre de la calle donde vive: ");
 			calleDireccion = sc.nextLine();
-			System.out.println("\nel numero de la calle: ");
+			System.out.println("\nEl numero de la calle: ");
 			numeroDireccion = sc.nextInt();
-			System.out.println("\npara acabar introduce la edad: ");
+			System.out.println("\nPara acabar introduce la edad: ");
 			edad = sc.nextInt();
 		}catch(Exception ioe){
 			System.out.println("Error (0 = null): "+ioe);
@@ -81,13 +81,13 @@ public class Main{
 			System.out.println("\nIngresa el nombre: ");
 			nombre = sc.nextLine();
 			nombre = sc.nextLine();
-			System.out.println("\nahora ingresa el apellido: ");
+			System.out.println("\nAhora ingresa el apellido: ");
 			apellido = sc.nextLine();
-			System.out.println("\nescribe el nombre de la calle donde vive: ");
+			System.out.println("\nEscribe el nombre de la calle donde vive: ");
 			calleDireccion = sc.nextLine();
-			System.out.println("\nel numero de la calle: ");
+			System.out.println("\nEl numero de la calle: ");
 			numeroDireccion = sc.nextInt();
-			System.out.println("\npara acabar introduce la edad: ");
+			System.out.println("\nPara acabar introduce la edad: ");
 			edad = sc.nextInt();
 		}catch(Exception ioe){
 			System.out.println("Error (0 = null): "+ioe);
@@ -114,13 +114,13 @@ public class Main{
 			System.out.println("\nIngresa el nombre: ");
 			nombre = sc.nextLine();
 			nombre = sc.nextLine();
-			System.out.println("\nahora ingresa el apellido: ");
+			System.out.println("\nAhora ingresa el apellido: ");
 			apellido = sc.nextLine();
-			System.out.println("\nescribe el nombre de la calle donde vive: ");
+			System.out.println("\nEscribe el nombre de la calle donde vive: ");
 			calleDireccion = sc.nextLine();
-			System.out.println("\nel numero de la calle: ");
+			System.out.println("\nEl numero de la calle: ");
 			numeroDireccion = sc.nextInt();
-			System.out.println("\npara acabar introduce la edad: ");
+			System.out.println("\nPara acabar introduce la edad: ");
 			edad = sc.nextInt();
 		}catch(Exception ioe){
 			System.out.println("Error (0 = null): "+ioe);
@@ -147,13 +147,13 @@ public class Main{
 			System.out.println("\nIngresa el nombre: ");
 			nombre = sc.nextLine();
 			nombre = sc.nextLine();
-			System.out.println("\nahora ingresa el apellido: ");
+			System.out.println("\nAhora ingresa el apellido: ");
 			apellido = sc.nextLine();
-			System.out.println("\nescribe el nombre de la calle donde vive: ");
+			System.out.println("\nEscribe el nombre de la calle donde vive: ");
 			calleDireccion = sc.nextLine();
-			System.out.println("\nel numero de la calle: ");
+			System.out.println("\nEl numero de la calle: ");
 			numeroDireccion = sc.nextInt();
-			System.out.println("\npara acabar introduce la edad: ");
+			System.out.println("\nPara acabar introduce la edad: ");
 			edad = sc.nextInt();
 		}catch(Exception ioe){
 			System.out.println("Error (0 = null): "+ioe);
@@ -181,13 +181,13 @@ public class Main{
 			System.out.println("\nIngresa el nombre: ");
 			nombreInmueble = sc.nextLine();		
 			nombreInmueble = sc.nextLine();
-			System.out.println("\nescribe la calle donde está: ");
+			System.out.println("\nEscribe la calle donde está: ");
 			calleDireccion = sc.nextLine();
-			System.out.println("\nel numero de la calle: ");
+			System.out.println("\nEl numero de la calle: ");
 			numeroDireccion = sc.nextInt();
-			System.out.println("\n¿cuantos metros tiene de ancho?: ");
+			System.out.println("\n¿Cuantos metros tiene de ancho?: ");
 			ancho = sc.nextDouble();
-			System.out.println("\n¿cuantos metros tiene de largo?: ");
+			System.out.println("\n¿Cuantos metros tiene de largo?: ");
 			largo = sc.nextDouble();
 		}catch(Exception ioe){
 			System.out.println("Error  (0 = null): "+ioe);
@@ -215,13 +215,13 @@ public class Main{
 			System.out.println("\nIngresa el nombre: ");
 			nombre = sc.nextLine();
 			nombre = sc.nextLine();
-			System.out.println("\nescribe la calle donde está: ");
+			System.out.println("\nEscribe la calle donde está: ");
 			calleDireccion = sc.nextLine();
-			System.out.println("\nel numero de la calle: ");
+			System.out.println("\nEl numero de la calle: ");
 			numeroDireccion = sc.nextInt();
-			System.out.println("\n¿cuantos metros tiene de ancho?: ");
+			System.out.println("\n¿Cuantos metros tiene de ancho?: ");
 			ancho = sc.nextDouble();
-			System.out.println("\n¿cuantos metros tiene de largo?: ");
+			System.out.println("\n¿Cuantos metros tiene de largo?: ");
 			largo = sc.nextDouble();
 			System.out.println("\n¿Que tipo de espacio público es?: ");
 			tipo = sc.nextLine();
@@ -266,18 +266,18 @@ public class Main{
 
 		try{
 			System.out.println("\nAhora crearemos un Ayuntamiento...");
-			System.out.println("\nescribe el nombre del Ayuntamiento: ");
+			System.out.println("\nEscribe el nombre del Ayuntamiento: ");
 			nombre = sc.nextLine();
-			System.out.println("escribe la calle donde está: ");
+			System.out.println("Escribe la calle donde está: ");
 			calleDireccion = sc.nextLine();
-			System.out.println("escribe el numero de la calle: ");
+			System.out.println("Escribe el numero de la calle: ");
 			numeroDireccion = sc.nextInt();
-			System.out.println("escribe el nombre del alcalde: ");
+			System.out.println("Escribe el nombre del alcalde: ");
 			alcalde = sc.nextLine();
 			alcalde = sc.nextLine();
 			System.out.println("¿Cuantos habitantes tiene el pueblo del Ayuntamiento en cuestión?: ");
 			poblacion = sc.nextInt();
-			System.out.println("\n¿cuantos de esos habitantes pueden votar (censados): ");
+			System.out.println("\n¿Cuantos de esos habitantes pueden votar (censados): ");
 			censo = sc.nextInt();
 		}catch(Exception ioe){
 			System.out.println("Error  (0 = null): "+ioe);
@@ -658,6 +658,7 @@ public class Main{
 	    			linea = br.readLine();
 	    		}linea = br.readLine();
     		}
+    		System.out.println("\nObjetos de tipo habitante en ArrayList insertados correctamente...\n");
     		System.out.println("\nLista de los habitantes con derecho a votar: \n\n");
     		for(int i=0; i < habitantesCompletos.size(); i++){
     			System.out.println("--------------------------------------------");
@@ -674,8 +675,5 @@ public class Main{
     	catch(IOException ioe){
     		System.out.println("Error: "+ioe);
     	}
-    	System.out.println("\nObjetos de tipo habitante en ArrayList insertados correctamente...");
-
-    	
-    }
+	}
 }
