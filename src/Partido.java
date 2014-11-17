@@ -13,6 +13,8 @@ public class Partido{
 		ano = ano;
 		ganador = ganador;
 	}
+	public Partido(){}
+	
 	public String getNombre(){
 		return nombre;
 	}

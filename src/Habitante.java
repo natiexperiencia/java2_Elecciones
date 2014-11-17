@@ -11,6 +11,7 @@ public class Habitante {
 		calleDireccion = calleDireccion;
 		numeroDireccion = numeroDireccion;
 	}
+	public Habitante(){}
 
 	public String direccion(){
 		String stringNumeroDireccion = Integer.toString(this.getNumeroDireccion());
