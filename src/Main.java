@@ -10,169 +10,49 @@ public class Main{
 		double largo = 0, ancho = 0;
 		boolean intemperie = false, ganador = false;
 
-//Habitante1
-		try{
-			System.out.println("\nBuenas,\nvamos a crear un habitante...");
-			System.out.println("\nIngresa el nombre: ");
+		System.out.println("\nCuantos habitantes quieres crear(num): ");
+		int cuantos = sc.nextInt();
+
+		ArrayList<Habitante> habitantesList = new ArrayList<Habitante>();
+		
+
+		for(int i=0; i < cuantos; i++){
+			Habitante persona = new Habitante();
+			System.out.println("\nNombre: ");
 			nombre = sc.nextLine();
-			System.out.println("\nAhora ingresa el apellido: ");
+			nombre = sc.nextLine();
+			persona.setNombre(nombre);
+
+			System.out.println("\nApellido: ");
 			apellido = sc.nextLine();
-			System.out.println("\nEscribe el nombre de la calle donde vive: ");
-			calleDireccion = sc.nextLine();
-			System.out.println("\nEl numero de la calle: ");
-			numeroDireccion = sc.nextInt();
-			System.out.println("\nPara acabar introduce la edad: ");
+			persona.setApellido(apellido);
+
+			System.out.println("\nEdad: ");
 			edad = sc.nextInt();
-		}catch(Exception ioe){
-			System.out.println("Error (0 = null): "+ioe);
+			persona.setEdad(edad);
+
+			System.out.println("\nNombre de la calle donde vive: ");
+			calleDireccion = sc.nextLine();
+			calleDireccion = sc.nextLine();
+			persona.setCalleDireccion(calleDireccion);
+
+			System.out.println("\nNumero de la calle donde vive: ");
+			numeroDireccion = sc.nextInt();
+			persona.setNumeroDireccion(numeroDireccion);
+
+			habitantesList.add(persona);
+
 		}
 
-		Habitante uno = new Habitante(nombre, apellido, edad, calleDireccion, numeroDireccion);
-		uno.setNombre(nombre);
-		uno.setApellido(apellido);
-		uno.setEdad(edad);
-		uno.setCalleDireccion(calleDireccion);
-		uno.setNumeroDireccion(numeroDireccion);
-
-		System.out.println("\nAqui tu habitante: ");
-		System.out.println("--------------------------------------");
-		System.out.println("Nombre: "+uno.getNombre());
-		System.out.println("Apellido: "+uno.getApellido());
-		System.out.println("Edad:"+uno.getEdad());
-		System.out.println("Direccion: "+uno.direccion());
-		System.out.println("--------------------------------------");
-
-//Habitente2
-		try{
-			System.out.println("\nVamos a crear un segundo habitante...");
-			System.out.println("\nIngresa el nombre: ");
-			nombre = sc.nextLine();
-			nombre = sc.nextLine();
-			System.out.println("\nAhora ingresa el apellido: ");
-			apellido = sc.nextLine();
-			System.out.println("\nEscribe el nombre de la calle donde vive: ");
-			calleDireccion = sc.nextLine();
-			System.out.println("\nEl numero de la calle: ");
-			numeroDireccion = sc.nextInt();
-			System.out.println("\nPara acabar introduce la edad: ");
-			edad = sc.nextInt();
-		}catch(Exception ioe){
-			System.out.println("Error (0 = null): "+ioe);
+		for(int i=0; i < habitantesList.size(); i++){
+			System.out.println("--------------------------------------------");
+    		System.out.println("Nombre: "+(habitantesList.get(i)).getNombre());
+    		System.out.println("Apellidos: "+(habitantesList.get(i)).getApellido());
+    		System.out.println("Edad: "+(habitantesList.get(i)).getEdad());
+    		System.out.println("Direccion: "+(habitantesList.get(i)).direccion());
+    		System.out.println("--------------------------------------------");
 		}
-
-		Habitante dos = new Habitante(nombre, apellido, edad, calleDireccion, numeroDireccion);
-		dos.setNombre(nombre);
-		dos.setApellido(apellido);
-		dos.setEdad(edad);
-		dos.setCalleDireccion(calleDireccion);
-		dos.setNumeroDireccion(numeroDireccion);
-
-		System.out.println("\nAqui tu habitante: ");
-		System.out.println("--------------------------------------");
-		System.out.println("Nombre: "+dos.getNombre());
-		System.out.println("Apellido: "+dos.getApellido());
-		System.out.println("Edad:"+dos.getEdad());
-		System.out.println("Direccion: "+dos.direccion());
-		System.out.println("--------------------------------------");
-
-//Habitente3
-		try{
-			System.out.println("\nVamos a crear un tercer habitante...");
-			System.out.println("\nIngresa el nombre: ");
-			nombre = sc.nextLine();
-			nombre = sc.nextLine();
-			System.out.println("\nAhora ingresa el apellido: ");
-			apellido = sc.nextLine();
-			System.out.println("\nEscribe el nombre de la calle donde vive: ");
-			calleDireccion = sc.nextLine();
-			System.out.println("\nEl numero de la calle: ");
-			numeroDireccion = sc.nextInt();
-			System.out.println("\nPara acabar introduce la edad: ");
-			edad = sc.nextInt();
-		}catch(Exception ioe){
-			System.out.println("Error (0 = null): "+ioe);
-		}
-
-		Habitante tres = new Habitante(nombre, apellido, edad, calleDireccion, numeroDireccion);
-		tres.setNombre(nombre);
-		tres.setApellido(apellido);
-		tres.setEdad(edad);
-		tres.setCalleDireccion(calleDireccion);
-		tres.setNumeroDireccion(numeroDireccion);
-
-		System.out.println("\nAqui tu habitante: ");
-		System.out.println("--------------------------------------");
-		System.out.println("Nombre: "+tres.getNombre());
-		System.out.println("Apellido: "+tres.getApellido());
-		System.out.println("Edad:"+tres.getEdad());
-		System.out.println("Direccion: "+tres.direccion());
-		System.out.println("--------------------------------------");
-
-//Habitente4
-		try{
-			System.out.println("\nVamos a crear un cuarto habitante...");
-			System.out.println("\nIngresa el nombre: ");
-			nombre = sc.nextLine();
-			nombre = sc.nextLine();
-			System.out.println("\nAhora ingresa el apellido: ");
-			apellido = sc.nextLine();
-			System.out.println("\nEscribe el nombre de la calle donde vive: ");
-			calleDireccion = sc.nextLine();
-			System.out.println("\nEl numero de la calle: ");
-			numeroDireccion = sc.nextInt();
-			System.out.println("\nPara acabar introduce la edad: ");
-			edad = sc.nextInt();
-		}catch(Exception ioe){
-			System.out.println("Error (0 = null): "+ioe);
-		}
-
-		Habitante cuatro = new Habitante(nombre, apellido, edad, calleDireccion, numeroDireccion);
-		cuatro.setNombre(nombre);
-		cuatro.setApellido(apellido);
-		cuatro.setEdad(edad);
-		cuatro.setCalleDireccion(calleDireccion);
-		cuatro.setNumeroDireccion(numeroDireccion);
-
-		System.out.println("\nAqui tu habitante: ");
-		System.out.println("--------------------------------------");
-		System.out.println("Nombre: "+cuatro.getNombre());
-		System.out.println("Apellido: "+cuatro.getApellido());
-		System.out.println("Edad:"+cuatro.getEdad());
-		System.out.println("Direccion: "+cuatro.direccion());
-		System.out.println("--------------------------------------");
-
-//Habitente5
-		try{
-			System.out.println("\nVamos a crear un quinto habitante...");
-			System.out.println("\nIngresa el nombre: ");
-			nombre = sc.nextLine();
-			nombre = sc.nextLine();
-			System.out.println("\nAhora ingresa el apellido: ");
-			apellido = sc.nextLine();
-			System.out.println("\nEscribe el nombre de la calle donde vive: ");
-			calleDireccion = sc.nextLine();
-			System.out.println("\nEl numero de la calle: ");
-			numeroDireccion = sc.nextInt();
-			System.out.println("\nPara acabar introduce la edad: ");
-			edad = sc.nextInt();
-		}catch(Exception ioe){
-			System.out.println("Error (0 = null): "+ioe);
-		}
-
-		Habitante cinco = new Habitante(nombre, apellido, edad, calleDireccion, numeroDireccion);
-		cinco.setNombre(nombre);
-		cinco.setApellido(apellido);
-		cinco.setEdad(edad);
-		cinco.setCalleDireccion(calleDireccion);
-		cinco.setNumeroDireccion(numeroDireccion);
-
-		System.out.println("\nAqui tu habitante: ");
-		System.out.println("--------------------------------------");
-		System.out.println("Nombre: "+cinco.getNombre());
-		System.out.println("Apellido: "+cinco.getApellido());
-		System.out.println("Edad:"+cinco.getEdad());
-		System.out.println("Direccion: "+cinco.direccion());
-		System.out.println("--------------------------------------");
+		
 //Inmueble
 
 
@@ -193,7 +73,7 @@ public class Main{
 			System.out.println("Error  (0 = null): "+ioe);
 		}
 
-		Inmueble inmueble = new Inmueble(nombreInmueble, calleDireccion, numeroDireccion, largo, ancho);
+		Inmueble inmueble = new Inmueble();
 
 		inmueble.setNombre(nombreInmueble);
 		inmueble.setCalleDireccion(calleDireccion);
@@ -239,7 +119,7 @@ public class Main{
 			System.out.println("Error  (0 = null)(intemperie = no: "+ioe);
 		}
 
-		EspacioPublico espacio = new EspacioPublico(nombre, tipo, calleDireccion, numeroDireccion, ancho, largo, intemperie);
+		EspacioPublico espacio = new EspacioPublico();
 
 		espacio.setNombre(nombre);
 		espacio.setCalleDireccion(calleDireccion);
@@ -283,7 +163,7 @@ public class Main{
 			System.out.println("Error  (0 = null): "+ioe);
 		}
 
-		Ayuntamiento ayunta = new Ayuntamiento(nombre, alcalde, calleDireccion, numeroDireccion, poblacion, censo);
+		Ayuntamiento ayunta = new Ayuntamiento();
 
 		ayunta.setNombre(nombre);
 		ayunta.setAlcalde(alcalde);
@@ -517,7 +397,18 @@ public class Main{
 		}
 
 //Escribir en archivo censo.txt datos de habitantes
-
+		try{
+			FileWriter escritorCenso = new FileWriter(archivoCenso);
+			for(int i=0; i > habitantesList.size(); i++){
+				escritorCenso.append((habitantesList.get(i)).getNombre()+",");
+				escritorCenso.append((habitantesList.get(i)).getApellido()+",");
+				escritorCenso.append((habitantesList.get(i)).getEdad()+",");
+				escritorCenso.append((habitantesList.get(i)).direccion()+"\n");
+			}
+		}catch(IOException ioe){
+			System.out.println("Error: "+ioe);
+		}
+/*
 		try{
 			System.out.println("\nEscribiendo en el archivo 'censo.txt'....");
 			FileWriter escritorCenso = new FileWriter(archivoCenso);
@@ -532,7 +423,7 @@ public class Main{
 		}catch(IOException e){
 			System.out.println("Error: "+e);
 		}
-
+*/
 //Leer lineas del archivo listadoPartidos.txt
 		try{		
 			FileInputStream fis = new FileInputStream(archivo);

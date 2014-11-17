@@ -12,6 +12,7 @@ public class Inmueble{
 		largo = largo;
 		ancho = ancho;
 	}
+	public Inmueble(){}
 
 	public String direccion(){
 		String stringNumeroDireccion = Integer.toString(this.getNumeroDireccion());

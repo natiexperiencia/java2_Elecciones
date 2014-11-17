@@ -12,6 +12,8 @@ public class Ayuntamiento{
 		poblacion = poblacion;
 		censo = censo;
 	}
+	public Ayuntamiento(){}
+	
 	public String direccion(){
 		String stringNumeroDireccion = Integer.toString(this.getNumeroDireccion());
 		String direccion = this.getCalleDireccion() + stringNumeroDireccion;

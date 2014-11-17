@@ -15,6 +15,7 @@ public class EspacioPublico{
 		largo = largo;
 		intemperie = intemperie;
 	}
+	public EspacioPublico(){}
 
 	public String direccion(){
 		String stringNumeroDireccion = Integer.toString(this.getNumeroDireccion());
